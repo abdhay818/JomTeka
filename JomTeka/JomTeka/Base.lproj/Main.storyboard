@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="JomTeka" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="JomTeka" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Utu-Mw-IpX">
+                                <rect key="frame" x="151.5" y="45" width="73" height="25"/>
+                                <rect key="contentStretch" x="0.75" y="0.0" width="1" height="1"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="textColor" red="0.24706194539093751" green="0.36280330154505669" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" red="0.47708576604716768" green="1" blue="0.23035142526754315" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <size key="shadowOffset" width="1" height="3"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="???" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X50-qc-E2I">
+                                <rect key="frame" x="168.5" y="151" width="38" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bgP-3B-H2J">
+                                <rect key="frame" x="115.5" y="78" width="144" height="30"/>
+                                <state key="normal" title="Soalan Seterusnya ..."/>
+                                <connections>
+                                    <action selector="showNextQuestion:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7vy-A1-AQM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fz0-hd-DVP">
+                                <rect key="frame" x="138.5" y="189" width="98" height="30"/>
+                                <state key="normal" title="Lihat Jawapan"/>
+                                <connections>
+                                    <action selector="showAnswer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tAW-9k-Qn1"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.40000000600000002" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="X50-qc-E2I" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1K2-uL-Cpk"/>
+                            <constraint firstItem="Utu-Mw-IpX" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="25" id="4U7-Ml-ZwM"/>
+                            <constraint firstItem="X50-qc-E2I" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="151" id="Dam-x8-2C8"/>
+                            <constraint firstItem="fz0-hd-DVP" firstAttribute="top" secondItem="X50-qc-E2I" secondAttribute="bottom" constant="8" symbolic="YES" id="OO5-3z-mRO"/>
+                            <constraint firstItem="Utu-Mw-IpX" firstAttribute="centerX" secondItem="bgP-3B-H2J" secondAttribute="centerX" id="Wl3-3Q-iak"/>
+                            <constraint firstItem="fz0-hd-DVP" firstAttribute="centerX" secondItem="bgP-3B-H2J" secondAttribute="centerX" id="dew-Lh-ZfN"/>
+                            <constraint firstItem="fz0-hd-DVP" firstAttribute="centerX" secondItem="X50-qc-E2I" secondAttribute="centerX" id="w2l-ai-1ba"/>
+                            <constraint firstItem="bgP-3B-H2J" firstAttribute="top" secondItem="Utu-Mw-IpX" secondAttribute="bottom" constant="8" symbolic="YES" id="yMv-Lv-6Mt"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="answerLabel" destination="X50-qc-E2I" id="kw2-10-3Iy"/>
+                        <outlet property="questionLabel" destination="Utu-Mw-IpX" id="J8o-R2-z4l"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
+        </scene>
+    </scenes>
+</document>
